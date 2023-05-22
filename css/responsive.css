@@ -1,0 +1,187 @@
+@media screen and (max-width: 1200px) {
+ 
+    .blockContainer {
+        min-width: unset;
+        max-width: unset;
+        margin : unset;
+    }
+    .blockContent .blockContent__event--std {
+        display:flex;
+        flex-direction : column;
+        
+
+    }
+    .blockContent .blockContent__event {
+        padding: 100px 0px 0px 0px;
+    }
+    .blockContent .std__content--text {
+        font-size: 50px;
+        line-height: calc(50px * 1.25);
+        margin: 0px 15px 30px 15px;
+        
+    }
+    .blockContent .std__content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    
+    }
+    .blockContent .std__listImg {
+        width: calc (80% - 50px );
+    }
+    .blockContent .blockContent__event--countdown{
+        margin: 75px 0px 0px 0px;
+    }
+    .blockContent .blockContent__map--listContent{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+        margin: 150px 0px 0px 0px;
+    }
+    .blockContent .listContent__content{
+        width: 100%;
+    }
+    .blockContent .listContent__map{
+        width: 80%;
+
+    }.blockContent .listContent__content {
+        margin: 0px 0px 30px 0px;
+    }
+    .blockContent .listContent__content--text{
+        font-size: 40px;
+        line-height: calc(40px * 1.25);
+    }
+    .blockContent .listContent__content--img {
+        height: 500px;
+    }
+    .blockContent .blockContent__couple {
+        padding: 120px 50px 0px 50px;
+    }
+    .blockContent .imgWrap__img {
+        height: 300px;
+    }
+    .blockHeader__logo .wrapText__text {
+        font-size: 25px;
+        line-height: calc(25px * 1.25);
+    }
+    .blockHeader__logo .wrapText__text:nth-child(2) {
+        margin: 5px 5px 0px 5px;
+    }
+    .blockHeaderFixed .blockHeader__logo {
+        left: 15px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .blockContent__banner .content__text{
+        font-size: 45px;
+        line-height: calc(45px * 1.25);
+        padding: 150px 0px 0px 0px;
+    }
+    .blockContent .std__listImg {
+        width: 90%;
+    }
+    .blockHeader .blockHeader__listMenu {
+        display: none;
+    }
+}
+@media screen and (max-width: 767px) {
+    .blockContent .title__item.middle {
+        font-size: 35px;
+        line-height: calc(35px * 1.25);
+    }
+    .blockContent .title__item.ends {
+        font-size: 16px;
+        line-height: calc(16px * 1.25);
+    }
+    .blockContent__banner .content__text{
+        padding: 100px 0px 0px 0px;
+        text-align: center;
+    }
+    .blockContent .std__listImg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+    .blockContent .std__listImg--item {
+        margin: 0px 0px 30px 0px;
+        min-width: 230px;
+    }
+    .blockContent .blockContent_couple--title {
+        padding: 0px 20px;
+    }
+    .blockContent .text__title {
+        font-size: 24px;
+        line-height: calc(24px * 1.25);
+    }
+    .blockContent .text__days {
+        font-size: 16px;
+        line-height: calc(16px * 1.25);
+    }
+    .blockContent .text__content {
+        font-size: 14px;
+        line-height: calc(14px * 1.25);
+    }
+    .blockContent .listContent__item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 0px 0px 50px 15px;    
+    }
+    .blockContent .listContent__item::before {
+        right: unset;
+        left: -34px;
+ 
+    }
+    .blockContent .blockContent_couple--listContent::before{
+        right:unset;
+        left: -15px;
+    }
+    .blockContent .listContent__item--imgWrap {
+        width: 100%;
+        margin: 0px 0px 10px 0px;
+
+    }
+    .blockContent .listContent__item--text {
+        width: 100%;
+
+    }
+    .blockContent .listContent__item:nth-child(2n) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .blockContent .listContent__item:nth-child(2n) .listContent__item--text {
+        text-align: left;
+    }
+    
+}
+@media screen and (max-width: 479px) {
+    .blockContent__banner .content__text{
+        font-size: 30px;
+        line-height: calc(30px * 1.25);
+        padding: 150px 0px 0px 0px;
+    }
+    .blockContent__banner .wrapImg__img{
+        height: 60vh;
+    }
+    .blockContent .std__content--text {
+        font-size: 30px;
+        line-height: calc(30px * 1.25);
+        margin: 0px 10px 50px 10px;
+        
+    }
+    .blockContent .std__listImg--item {
+        min-width: 200px;
+    }
+    
+}
+@media screen and (max-width: 380px) {
+    
+}
