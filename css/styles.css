@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 
 
 @font-face {
@@ -121,8 +128,9 @@ html, body {
     position: absolute;
     top: 0px;
     left: 0px;
-    background: -webkit-gradient(linear,left top, left bottom,color-stop(25%, rgba(0,0,0,0.65)), color-stop(40%, rgba(0,0,0,0.25)));
     background: -o-linear-gradient(top,rgba(0,0,0,0.65) 25%, rgba(0,0,0,0.25) 40%);
+    background: -webkit-gradient(linear,left top, left bottom,color-stop(20%, rgba(0,0,0,0.6)), color-stop(30%, rgba(0,0,0,0.4   )), color-stop(60%, transparent), to(transparent));
+    background: -o-linear-gradient(top,rgba(0,0,0,0.6) 20%, rgba(0,0,0,0.4   ) 30%, transparent 60%, transparent 100%);
     background: linear-gradient(to bottom,rgba(0,0,0,0.6) 20%, rgba(0,0,0,0.4   ) 30%, transparent 60%, transparent 100%);
     width: 100%;
     height: 100%;
@@ -161,16 +169,29 @@ html, body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: relative;
     height : 100%;
 }
 .blockHeaderFixed {
     position: fixed;
     width: 100vw;
-   animation: 1.5s showHeader 1;
+   -webkit-animation: 1.5s showHeader 1;
+           animation: 1.5s showHeader 1;
    background : rgba(255,255,255,0.75);
-   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+           backdrop-filter: blur(10px);
+}
+@-webkit-keyframes showHeader {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 @keyframes showHeader {
     from {
@@ -187,22 +208,34 @@ html, body {
     left: 0;
     right: 0;
     margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     cursor: pointer;
 }
 
 .blockHeader .blockHeader__listMenu {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     top: 70px;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 
@@ -213,6 +246,8 @@ html, body {
     top: 0;
     right: unset;
     margin: unset;
+    -webkit-transition: 1s all ease;
+    -o-transition: 1s all ease;
     transition: 1s all ease;
 }
 .blockHeaderFixed .blockHeader__logo .wrapText__text {
@@ -223,6 +258,8 @@ html, body {
     left: unset;
     top: 0;
     margin: unset;
+    -webkit-transition: 1s all ease;
+    -o-transition: 1s all ease;
     transition: 1s all ease;
 }
 .blockHeader__logo .wrapText__text:nth-child(2){
@@ -273,6 +310,8 @@ html, body {
     bottom: -5px;
     left: unset;
     right: 0;
+    -webkit-transition: 0.5s ease 0.15s;
+    -o-transition: 0.5s ease 0.15s;
     transition: 0.5s ease 0.15s;
 }
 .blockHeaderFixed .blockHeader__listMenu--item::before {
@@ -281,6 +320,8 @@ html, body {
 }
 
 .blockHeader .blockHeader__listMenu--item:hover::before {
+    -webkit-transition: 0.5s ease 0.15s;
+    -o-transition: 0.5s ease 0.15s;
     transition: 0.5s ease 0.15s;
     width: 100%;
     left: 0;
@@ -291,9 +332,15 @@ html, body {
     padding: 175px 0px 0px 0px;
 }
 .blockContent .blockContent__event--std {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
 }
 .blockContent  .std__content {
@@ -302,14 +349,22 @@ html, body {
 }
 .blockContent .std__listImg {
     width: calc(75% - 50px) ;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .blockContent .std__content--text {
     font-family: GAMBARINO_REGULAR;
     font-size: 100px;
     line-height: calc(100px * 1.25);
+background: -webkit-gradient(linear, left top, right top, from(#000), to(#ccc));
+background: -o-linear-gradient(left, #000, #ccc);
 background: linear-gradient(to right, #000, #ccc);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
@@ -323,12 +378,17 @@ background: linear-gradient(to right, #000, #ccc);
 .blockContent .item__img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: calc(450px / 2);
 }
 .blockContent .countdown__listTime {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
   
 .blockContent .countdown__listTime--item {
@@ -348,9 +408,15 @@ background: linear-gradient(to right, #000, #ccc);
     margin: 100px 0px 0px 0px;
   }
   .blockContent .blockContent__map--listContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
     margin: 150px 0px 0px 0px;
     
@@ -358,7 +424,8 @@ background: linear-gradient(to right, #000, #ccc);
     
   }
   .blockContent .listContent__content--img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 80%;
     border-radius: 20px;
     height: 350px;
@@ -374,10 +441,19 @@ background: linear-gradient(to right, #000, #ccc);
     color: #525252;
   }
   .blockContent .listContent__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 50%;
     
   }
@@ -397,9 +473,15 @@ background: linear-gradient(to right, #000, #ccc);
     margin: 10px 0px 0px 0px;
   }
 .blockContent .listContent__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
     margin: 0px 0px 50px 0px;
     position: relative;
@@ -417,7 +499,8 @@ background: linear-gradient(to right, #000, #ccc);
     background: rgb(132,130,117);
 }
 .blockContent .imgWrap__img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
     height: 250px;
 }
@@ -448,10 +531,19 @@ background: linear-gradient(to right, #000, #ccc);
 
 }
 .blockContent .blockContent_couple--title {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 0px 60px 0px 60px;
   
    
@@ -497,7 +589,10 @@ background: linear-gradient(to right, #000, #ccc);
     color: rgb(116,116,116);
 }
 .blockContent .listContent__item:nth-child(2n) {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
    
 }
 .blockContent .listContent__item:nth-child(2n) .listContent__item--text {
@@ -515,17 +610,25 @@ background: linear-gradient(to right, #000, #ccc);
     left: 0;
     background: transparent;
     z-index: -1;
+    -webkit-transition: 0.4s all;
+    -o-transition: 0.4s all;
     transition: 0.4s all;
     visibility : hidden;
 }
 .blockModal.active{
     background: rgba(0,0,0,0.7);
     z-index: 99;
+    -webkit-transition: 0.4s all;
+    -o-transition: 0.4s all;
     transition: 0.4s all;
     visibility : visible;
 }
 .blockModal.active .blockModal__wrap--btnClose{
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: 0.4s all;
+    -o-transition: 0.4s all;
     transition: 0.4s all;
 }
 .blockModal .blockModal__wrap{
@@ -537,29 +640,46 @@ background: linear-gradient(to right, #000, #ccc);
     height: 40px;
     border-radius: 50%;
     background: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: absolute;
     right: 20px;
     top: 20px;
+    -webkit-transition: 0.4s all;
+    -o-transition: 0.4s all;
     transition: 0.4s all;
-    transform: scale(0);
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
     
     
 }
 .blockModal .btnClose__img {
     width: 12.5px;
     height: 12.5px;
+    -webkit-transition: 0.4s all;
+    -o-transition: 0.4s all;
     transition: 0.4s all;
 }
 .blockModal .blockModal__wrap--btnClose:hover  {
     background: #FFF;
     cursor: pointer;
+    -webkit-transition: 0.4s all;
+    -o-transition: 0.4s all;
     transition: 0.4s all;
 }
 .blockModal .blockModal__wrap--btnClose:hover .btnClose__img{
-    filter: invert(1);
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    -webkit-transition: 0.4s all;
+    -o-transition: 0.4s all;
     transition: 0.4s all;
 
 }
@@ -568,29 +688,50 @@ background: linear-gradient(to right, #000, #ccc);
     height: 450px;
     background: #FFF;
     border-radius: 10px;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    align-items: flex-start;
-    justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position:relative;
     padding: 80px 0px 0px 0px;
-    transform : translateY(150%);
+    -webkit-transform : translateY(150%);
+        -ms-transform : translateY(150%);
+            transform : translateY(150%);
     will-change: transform;
+    -webkit-transition: 0.4s all;
+    -o-transition: 0.4s all;
     transition: 0.4s all;
 }
 .blockModal.active .blockModal__wrap--listContent {
-    transform : translateY(0%);
+    -webkit-transform : translateY(0%);
+        -ms-transform : translateY(0%);
+            transform : translateY(0%);
+    -webkit-transition: 0.6s all;
+    -o-transition: 0.6s all;
     transition: 0.6s all;
     will-change: transform;
 }
 .blockModal .blockModal__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 100%;
 
 }
 .blockModal .listContent__item--img {
-    object-fit:contain ;
+    -o-object-fit:contain ;
+       object-fit:contain ;
     width: 100%;
     height: 350px;
 
@@ -614,8 +755,14 @@ background: linear-gradient(to right, #000, #ccc);
     height: 50px;
     color: #fff;
     background: rgb(216,46,52);  
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;  
+        -ms-flex-align: center;  
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
     font-size: 30px;
     line-height:calc( 30px * 1.25);
@@ -624,16 +771,21 @@ background: linear-gradient(to right, #000, #ccc);
 .blockModal .listContent__img {
     width: 60px;
     position :absolute;
-    transform : rotate(-25deg)
+    -webkit-transform : rotate(-25deg);
+        -ms-transform : rotate(-25deg);
+            transform : rotate(-25deg)
 }
 .blockModal .listContent__img.left {
     left: -10px;
     top: 5px;
-    transform : rotate(25deg)
+    -webkit-transform : rotate(25deg);
+        -ms-transform : rotate(25deg);
+            transform : rotate(25deg)
 }
 .blockModal .listContent__img.right {
     right : -10px;
     top : -25px;
-    transform : rotate(-30deg)
+    -webkit-transform : rotate(-30deg);
+        -ms-transform : rotate(-30deg);
+            transform : rotate(-30deg)
 }
-
