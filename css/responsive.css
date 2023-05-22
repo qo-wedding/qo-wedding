@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @media screen and (max-width: 1200px) {
  
     .blockContainer {
@@ -6,8 +13,13 @@
         margin : unset;
     }
     .blockContent .blockContent__event--std {
+        display:-webkit-box;
+        display:-ms-flexbox;
         display:flex;
-        flex-direction : column;
+        -webkit-box-orient : vertical;
+        -webkit-box-direction : normal;
+            -ms-flex-direction : column;
+                flex-direction : column;
         
 
     }
@@ -21,10 +33,17 @@
         
     }
     .blockContent .std__content {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         width: 100%;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     
     }
     .blockContent .std__listImg {
@@ -34,10 +53,19 @@
         margin: 75px 0px 0px 0px;
     }
     .blockContent .blockContent__map--listContent{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         width: 100%;
         margin: 150px 0px 0px 0px;
     }
@@ -101,10 +129,19 @@
         text-align: center;
     }
     .blockContent .std__listImg {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
 
     }
     .blockContent .std__listImg--item {
@@ -127,10 +164,19 @@
         line-height: calc(14px * 1.25);
     }
     .blockContent .listContent__item {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         margin: 0px 0px 50px 15px;    
     }
     .blockContent .listContent__item::before {
@@ -152,10 +198,19 @@
 
     }
     .blockContent .listContent__item:nth-child(2n) {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .blockContent .listContent__item:nth-child(2n) .listContent__item--text {
         text-align: left;
