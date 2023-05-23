@@ -13,12 +13,10 @@ $(document).ready(function () {
 	});
   
     // cherrishing
-    let btnShowBanking = $("#cherrishing");
+    let btnShowBanking = $(".cherrishing");
     let showBanking = false;
     let modal = $(".blockModal");
     let btnClose= $(".blockModal__wrap--btnClose");
-
-    
     btnShowBanking.on("click", function() {
         showBanking = true;
         if (showBanking === true){
@@ -29,6 +27,32 @@ $(document).ready(function () {
         showBanking = false;
         if (showBanking === false){
             modal.removeClass("active");
+        }
+    });
+    // btnMenuMoblie
+    let btnMenu= $(".blockHeader__btnMenuMoblie");
+    let listMenuMobile = $(".blockMenuMobile");
+    let itemMenuMobile = $(".blockMenuMobile__listMenu--item");
+    let showMenu = false;
+    let selectorLogo = btnMenu.parent().children(".blockHeader__logo")
+    btnMenu.on("click", function() {
+        showMenu = !showMenu;
+        if (showMenu === true){
+            btnMenu.addClass("active");
+            listMenuMobile.addClass("active");
+            selectorLogo.addClass("active");
+        } else {
+            btnMenu.removeClass("active");
+            listMenuMobile.removeClass("active");
+            selectorLogo.removeClass("active");
+        }
+    });
+    itemMenuMobile.on("click", function() {
+        showMenu = false;
+        if (showMenu === false){
+            btnMenu.removeClass("active");
+            listMenuMobile.removeClass("active");
+            selectorLogo.removeClass("active");
         }
     });
     
