@@ -1,16 +1,4 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
 
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
 
 @media screen and (max-width: 1200px) {
     
@@ -30,7 +18,23 @@
         
 
     }
-    .blockContent .blockContent__event {
+    .blockContent .listAlbum__item{
+       width: calc(100% / 2);
+       height: 600px;
+       margin : 0px !important;
+    }
+    .blockContent .listAlbum__item:hover .listAlbum__item--img {
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1);
+    }
+    .blockContent .blockContent__album--listAlbum{
+        margin: 0px;
+    }
+    .blockContent .blockContent__album--title{
+        margin: 0px 0px 60px 0px
+    }
+    .blockConteblblockCoockCnt .blockContent__event {
         padding: 100px 0px 0px 0px;
     }
     .blockContent .std__content--text {
@@ -184,6 +188,7 @@
         padding: 100px 0px 0px 0px;
         text-align: center;
     }
+    
     .blockModal .listContent__item--text {
         font-size: 14px;
         line-height: calc( 14px * 1.25);
@@ -275,7 +280,9 @@
     .blockContent .listContent__item:nth-child(2n) .listContent__item--text {
         text-align: left;
     }
-    
+    .blockContent .listAlbum__item {
+        height: 385px;
+    }
 }
 @media screen and (max-width: 479px) {
     .blockContent__banner .content__text{
@@ -307,6 +314,14 @@
     }
     .blockModal .listContent__item--img {
         height : 250px;
+    }
+    .blockContent .listAlbum__item{
+        width: 100%;
+        height: 500px
+    }
+    .blockContent .text__content {
+        font-size: 16px;
+        line-height: calc(16px * 1.25);
     }
 }
 @media screen and (max-width: 380px) {
