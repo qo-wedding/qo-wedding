@@ -55,8 +55,33 @@ $(document).ready(function () {
             selectorLogo.removeClass("active");
         }
     });
+    // SCROLL TO ID
+    let anchorlinks = document.querySelectorAll('a[href^="#"]')
+    for (let item of anchorlinks) {
+      item.addEventListener('click', (e) => {
+        let hashval = item.getAttribute('href');
+        let target = document.querySelector(hashval);
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+        // history.pushState(null, null, hashval);
+        e.preventDefault();
+      })
+    }
+    copyBanking();
+    // btnCopy transition
+    let btnCopy = $(".banking__btnCopy");
+    btnCopy.on("click", function() {
+        $(this).parent().parent().addClass("copyText");;
+        setTimeout(function() { 
+            let itemBtnCopy =  $(".banking__btnCopy").parent().parent();
+            itemBtnCopy.removeClass("copyText")
+        }, 1500);
+    });
     
 })
+
 function countdown() {
     const targetDate = new Date('May 28, 2023 11:00:00').getTime();
     const now = new Date().getTime();
@@ -78,3 +103,17 @@ function countdown() {
   // Call the countdown function every second
   setInterval(countdown, 1000);
  
+
+//   COPY
+function copyBanking() {
+    var copyBtn = $('.banking__btnCopy');
+    copyBtn.on('click', function() {
+        var content = $(this).prev('.banking__number');
+        var clipboard = document.createRange();
+        clipboard.selectNode(content[0]);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(clipboard);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+    });
+}
