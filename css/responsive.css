@@ -307,13 +307,13 @@
     }
     .blockModal .blockModal__wrap--listContent{
         width: 350px;
-        height: 300px;        
+        height: 325px;        
     }
     .blockModal .listContent__item--text {
         margin : 0px 0px 15px 0px;
     }
     .blockModal .listContent__item--img {
-        height : 250px;
+        height : 200px;
     }
     .blockContent .listAlbum__item{
         width: 100%;
@@ -322,6 +322,14 @@
     .blockContent .text__content {
         font-size: 16px;
         line-height: calc(16px * 1.25);
+    }
+    .blockModal .banking__number {
+        font-size : 12px;
+        line-height: calc(12px * 1.25);
+    }
+    .blockModal .listContent__item--name {
+        font-size : 12px;
+        line-height: calc(12px * 1.25);
     }
 }
 @media screen and (max-width: 380px) {
