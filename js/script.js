@@ -109,11 +109,12 @@ function copyBanking() {
     var copyBtn = $('.banking__btnCopy');
     copyBtn.on('click', function() {
         var content = $(this).prev('.banking__number');
+        console.log(content);
         var clipboard = document.createRange();
-        clipboard.selectNode(content[0]);
+        parseInt(clipboard.selectNode(content[0]));
         window.getSelection().removeAllRanges();
         window.getSelection().addRange(clipboard);
         document.execCommand('copy');
         window.getSelection().removeAllRanges();
-    });
+    })
 }
