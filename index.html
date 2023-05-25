@@ -7,6 +7,7 @@
     <link type="text/css" rel="stylesheet" href="css/reset.css" />
     <link type="text/css" rel="stylesheet" href="css/styles.css" />
     <link type="text/css" rel="stylesheet" href="css/responsive.css" />
+    <link type="text/css" rel="stylesheet" href="css/aos.css" />
   </head>
   <body>
     <div class="fullWeb">
@@ -65,13 +66,13 @@
         <div class="blockHeader">
             <div class="blockHeaderWrap blockContainer">
                 <a href="#banner" class="blockHeader__logo">
-                    <div class="blockHeader__logo--wrapText">
-                        <p class="wrapText__text">Hải Quân</p>
+                    <div data-aos="fade-down" data-aos-duration="1000" class="blockHeader__logo--wrapText">
+                        <p  class="wrapText__text">Hải Quân</p>
                         <p class="wrapText__text">❤</p>
                         <p class="wrapText__text">Tường Oanh</p>
                     </div>
                 </a>
-                <div class="blockHeader__listMenu">
+                <div data-aos="fade-left" data-aos-duration="1000" class="blockHeader__listMenu">
                     <div class="blockHeader__listMenu--item">
                         <a href="#event" class="item__text">Sự kiện</a>
                     </div>
@@ -99,26 +100,28 @@
                     <img class="wrapImg__img" src="images/banner1.jpg"/>
                 </div>
                 <div class="blockContent__banner--content">
-                    <p class="content__text">You and I. Just two of us</p>
-                    <p class="content__text day">28.05.2023</p>
+                    <p data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1500" class="content__text">You and I. Just two of us</p>
+                    <p data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1500" data-aos-delay="300" class="content__text day">28.05.2023</p>
 
                 </div>
             </div>
             <div class="blockContent__event blockContainer" id="event">
-                <div class="blockContent__event--std">
+                <div   class="blockContent__event--std">
                     <div class="std__content">
-                        <p class="std__content--text">SAVE</p>
-                        <p class="std__content--text">THE</p>
-                        <p class="std__content--text">DATES</p>
+                        <p data-aos="fade-right" data-aos-duration="600"  data-aos-delay="300" class="std__content--text">SAVE</p>
+                        <p data-aos="fade-right" data-aos-duration="600"  data-aos-delay="400" class="std__content--text">THE</p>
+                        <p data-aos="fade-right" data-aos-duration="600"  data-aos-delay="500" class="std__content--text">DATES</p>
                     </div>
-                    <div class="std__listImg">
-                        <div class="std__listImg--item">
-                            <img class="item__img" src="images/std1.jpg" />
+                    <div  class="std__listImg">
+                        <div data-aos="fade-left" data-aos-duration="600"  data-aos-delay="300" class="std__listImg--item">
+                            <img  class="item__img" src="images/std1.jpg" />
                         </div>
-                        <div class="std__listImg--item">
+                        <div data-aos="fade-left" data-aos-duration="600"  data-aos-delay="400" class="std__listImg--item">
                             <img class="item__img" src="images/std2.jpg" />
                         </div>
-                        <div class="std__listImg--item">
+                        <div data-aos="fade-left" data-aos-duration="600"  data-aos-delay="500" class="std__listImg--item">
                             <img class="item__img" src="images/std3.jpg" />
                         </div>
                     
@@ -163,12 +166,13 @@
                     <p class="title__item start">BEGGINING OF TRUE LOVE</p>
                     <p class="title__item middle">A short timeline of our story</p>
                     <img class="title__img" src="images/separator.png"/>
-                    <p class="title__item ends">Một câu chuyện tình luôn là một điều kỳ diệu, nơi hai người có thể đến với nhau và tìm thấy niềm hạnh phúc trong những lúc khó khăn và những niềm vui nhỏ bé của cuộc sống. Nó bắt đầu từ những cảm xúc chân thành và những lời nói đầu tiên rồi dần trở thành một hành trình đầy thử thách và sự bền chí, để cuối cùng trở thành một khoảnh khắc đẹp khi hai trái tim hòa quyện vào nhau. </p>
+                    <p data-aos="fade-up"
+                    data-aos-duration="1500" class="title__item ends">Một câu chuyện tình luôn là một điều kỳ diệu, nơi hai người có thể đến với nhau và tìm thấy niềm hạnh phúc trong những lúc khó khăn và những niềm vui nhỏ bé của cuộc sống. Nó bắt đầu từ những cảm xúc chân thành và những lời nói đầu tiên rồi dần trở thành một hành trình đầy thử thách và sự bền chí, để cuối cùng trở thành một khoảnh khắc đẹp khi hai trái tim hòa quyện vào nhau. </p>
                 </div>
                 <div class="blockContent_couple--listContent">
                     <div class="listContent__item">
                         <div class="listContent__item--imgWrap">
-                            <img class="imgWrap__img" src="images/couple.jpg" />
+                            <img data-aos="zoom-in-right"  data-aos-duration="600" class="imgWrap__img" src="images/couple.jpg" />
                         </div>
                         <div class="listContent__item--text">
                             <p class="text__title">Hôm ấy ta đã gặp nhau!</p>
@@ -178,7 +182,7 @@
                     </div>
                     <div class="listContent__item">
                         <div class="listContent__item--imgWrap">
-                            <img class="imgWrap__img" src="images/couple6.jpg" />
+                            <img data-aos="zoom-in-left"  data-aos-duration="600"  class="imgWrap__img" src="images/couple6.jpg" />
                         </div>
                         <div class="listContent__item--text">
                             <p class="text__title">Lời tỏ tình</p>
@@ -188,7 +192,7 @@
                     </div>
                     <div class="listContent__item">
                         <div class="listContent__item--imgWrap">
-                            <img class="imgWrap__img" src="images/couple4.jpg" />
+                            <img data-aos="zoom-in-right"  data-aos-duration="600"  class="imgWrap__img" src="images/couple4.jpg" />
                         </div>
                         <div class="listContent__item--text">
                             <p class="text__title">Lời cầu hôn</p>
@@ -198,7 +202,7 @@
                     </div>
                     <div class="listContent__item">
                         <div class="listContent__item--imgWrap">
-                            <img class="imgWrap__img" src="images/couple3.jpeg" />
+                            <img data-aos="zoom-in-left"  data-aos-duration="600"  class="imgWrap__img" src="images/couple3.jpeg" />
                         </div>
                         <div class="listContent__item--text">
                             <p class="text__title">Đếm ngược</p>
@@ -207,7 +211,7 @@
                         </div>
                     </div>
                     <div class="listContent__item">
-                        <div class="listContent__item--imgWrap">
+                        <div data-aos="zoom-in-right"  data-aos-duration="600" class="listContent__item--imgWrap">
                             <img class="imgWrap__img" src="images/flowerWedding.jpeg" />
                         </div>
                         <div class="listContent__item--text">
@@ -222,7 +226,8 @@
                 <div class="blockContent__album--title">
                     <p class="title__text">ALBUM ẢNH</p>
                 </div>
-                <div class="blockContent__album--listAlbum">
+                <div data-aos="fade-up"
+                 data-aos-duration="1000" class="blockContent__album--listAlbum">
                     <div class="listAlbum__item">
                         <img class="listAlbum__item--img" src="images/album/1.jpg">
                     </div>
@@ -265,5 +270,9 @@
     </div>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
   </body>
 </html>
