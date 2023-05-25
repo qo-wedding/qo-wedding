@@ -31,8 +31,8 @@ $(document).ready(function () {
         showBanking = false;
         if (showBanking === false){
             modal.removeClass("active");
-            viewWeb.css("overflow","overlay");
-            wrapWeb.css("overflow","overlay");
+            viewWeb.css("overflow","unset");
+            wrapWeb.css("overflow","unset");
         }
     });
     // btnMenuMoblie
