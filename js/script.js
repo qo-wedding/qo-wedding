@@ -17,16 +17,22 @@ $(document).ready(function () {
     let showBanking = false;
     let modal = $(".blockModal");
     let btnClose= $(".blockModal__wrap--btnClose");
+    let viewWeb = $("body");
+    let wrapWeb = $("html");
     btnShowBanking.on("click", function() {
         showBanking = true;
         if (showBanking === true){
             modal.addClass("active");
+            viewWeb.css("overflow","hidden");
+            wrapWeb.css("overflow","hidden");
         }
-    });
+    }); 
     btnClose.on("click", function() {
         showBanking = false;
         if (showBanking === false){
             modal.removeClass("active");
+            viewWeb.css("overflow","overlay");
+            wrapWeb.css("overflow","overlay");
         }
     });
     // btnMenuMoblie
@@ -79,7 +85,8 @@ $(document).ready(function () {
             itemBtnCopy.removeClass("copyText")
         }, 1500);
     });
-    
+   
+
 })
 
 function countdown() {
@@ -109,12 +116,17 @@ function copyBanking() {
     var copyBtn = $('.banking__btnCopy');
     copyBtn.on('click', function() {
         var content = $(this).prev('.banking__number');
-        console.log(content);
         var clipboard = document.createRange();
-        parseInt(clipboard.selectNode(content[0]));
+        clipboard.selectNode(content[0]);
         window.getSelection().removeAllRanges();
         window.getSelection().addRange(clipboard);
         document.execCommand('copy');
+        if (window.clipboardData && window.clipboardData.getData) {
+            var clipboardText = window.clipboardData.getData('text');
+            console.log(clipboardText);
+          } else {
+            console.log('Could not access clipboard data.');
+          }
         window.getSelection().removeAllRanges();
     })
 }
