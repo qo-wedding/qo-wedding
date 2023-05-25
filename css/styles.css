@@ -44,8 +44,6 @@ html, body {
     font-family: CRIMSONPRO_REGULAR; 
     background: #FFF;
     color: #000;
-    overflow-y : auto;
-    overflow : overlay; 
 }
 
 .fullWeb {
@@ -58,7 +56,7 @@ html, body {
     margin: 0 auto;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 12px;
 }
 
@@ -71,7 +69,7 @@ html, body {
     -webkit-box-shadow: inset 0 0 10px 10px rgba(0,0,0,0.4);
     box-shadow: inset 0 0 10px 10px rgba(0,0,0,0.4);
     border: solid 3px transparent;
-}
+} */
 
 
 .blockContent {
