@@ -793,6 +793,7 @@ background: linear-gradient(to right, #000, #ccc);
     -o-transition: 0.6s all;
     transition: 0.6s all;
     will-change: transform;
+    
 }
 .blockModal .blockModal__wrap {
     display: -webkit-box;
